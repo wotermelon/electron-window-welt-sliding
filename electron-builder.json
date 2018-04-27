@@ -1,0 +1,60 @@
+{
+  "productName": "welt-sliding",
+  "buildVersion": "1.0.0",
+  "appId": "1111",
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "http://192.168.2.79:8000/mac-updates/"
+    }
+  ],
+  "directories": {
+    "output": "build"
+  },
+  "files": [
+    "dist/electron/**/*"
+  ],
+  "dmg": {
+    "background": "build/assets/mac-bg.tiff",
+    "icon": "build/icons/install.icns",
+    "iconSize": 80,
+    "contents": [
+      {
+        "x": 410,
+        "y": 155,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 130,
+        "y": 155,
+        "type": "file"
+      }
+    ],
+    "window": {
+      "width": 538,
+      "height": 359
+    }
+  },
+  "mac": {
+    "category": "public.app-category.business",
+    "target": "dmg",
+    "type": "distribution",
+    "icon": "build/icons/icon.icns"
+  },
+  "win": {
+    "timeStampServer": "http://timestamp.wosign.com/timestamp",
+    "rfc3161TimeStampServer": "http://timestamp.wosign.com/timestamp",
+    "certificateSubjectName": "9144030072717954XH",
+    "icon": "build/icons/icon.ico"
+  },
+  "nsis": {
+    "allowToChangeInstallationDirectory": true,
+    "oneClick": false,
+    "installerIcon": "build/icons/install.ico",
+    "runAfterFinish": false
+  },
+  "linux": {
+    "icon": "build/icons/icon.ico"
+  }
+}

@@ -1,0 +1,12 @@
+.DS_Store
+dist/electron/main.js
+node_modules/
+npm-debug.log
+npm-debug.log.*
+thumbs.db
+!.gitkeep
+build/mac
+build/win-ia32-unpacked
+dist/electron
+build/.cache
+build/update
