@@ -1,22 +1,25 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
-
-/**
- * Set `__static` path to static files in production
- * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
- */
-if (process.env.NODE_ENV !== 'development') {
-  global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
-}
+const { app, BrowserWindow } = require('electron')
+const weltSliding = require('./welt-sliding')
 
 function createWindow () {
-  const win = new BrowserWindow({
-    width: 400,
-    height: 800
+  let win = new BrowserWindow({
+    width: 500,
+    height: 800,
+    maximizable: false,
+    webPreferences: {
+      devTools: true
+    }
   })
 
-  win.loadURL('http://www.baidu.com')
+  win.on('closed', () => {
+    win = null
+  })
+
+  weltSliding(win)
+
+  win.loadURL(`file://${__dirname}/index.html`)
 }
 
 app.on('ready', createWindow)

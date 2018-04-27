@@ -1,6 +1,4 @@
-import winMouse from 'win-mouse'
-
-const mouse = winMouse()
+const mouse = require('win-mouse')()
 
 class WeltSlide {
   /**
@@ -192,6 +190,6 @@ class WeltSlide {
 
 const weltSlide = new WeltSlide()
 
-export default function (win) {
+module.exports = function (win) {
   return weltSlide.setWindow(win)
 }
