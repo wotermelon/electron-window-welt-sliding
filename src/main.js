@@ -1,11 +1,12 @@
 'use strict'
 
 const { app, BrowserWindow } = require('electron')
-const weltSliding = require('./welt-sliding')
+// const weltSliding = require('./welt-sliding')
+const weltSliding = require('../dist/electron-window-welt-sliding')
 
 function createWindow () {
   let win = new BrowserWindow({
-    width: 400,
+    width: 450,
     height: 800,
     maximizable: false,
     webPreferences: {

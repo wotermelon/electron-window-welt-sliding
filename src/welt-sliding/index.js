@@ -105,7 +105,7 @@ class WeltSlide {
    * 设置窗口对象
    * @param {BrowserWindow} win
    */
-  setHideTimeout (timeout) {
+  setHideTimeout (timeout = 300) {
     if (!this.isNumber(timeout)) {
       throw new Error('Timeout not a legal number.')
     } else {
@@ -117,7 +117,7 @@ class WeltSlide {
    * 设置动画时间
    * @param {Number} speed 动画持续时间
    */
-  setSpeed (speed) {
+  setSpeed (speed = 500) {
     if (!this.isNumber(speed)) {
       throw new Error('Speed not a legal number.')
     } else {
