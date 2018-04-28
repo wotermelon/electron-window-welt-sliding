@@ -169,7 +169,7 @@ class WeltSlide {
       let timer = null
       let offset = end - start
       let t = 0
-      let maxT = parseInt(this.options.speed / 16.6)
+      let maxT = parseInt(this.options.speed / 10)
       timer = setInterval(() => {
         t++
         if (t >= maxT) {
@@ -183,7 +183,7 @@ class WeltSlide {
           offsetY = 0
         }
         fn && fn(offsetY)
-      }, 16.6)
+      }, 10)
     })
   }
 }

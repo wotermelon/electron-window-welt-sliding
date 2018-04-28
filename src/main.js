@@ -5,7 +5,7 @@ const weltSliding = require('./welt-sliding')
 
 function createWindow () {
   let win = new BrowserWindow({
-    width: 500,
+    width: 400,
     height: 800,
     maximizable: false,
     webPreferences: {
